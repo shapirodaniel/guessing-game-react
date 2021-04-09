@@ -8,19 +8,19 @@ const Row = ({ scalar }) => {
 
 	const pattern = () => {
 		return (scalar / 10) % 2 === 0
-			? ['lightSquare', 'darkSquare']
-			: ['darkSquare', 'lightSquare'];
+			? ['darkSquare', 'lightSquare']
+			: ['lightSquare', 'darkSquare'];
 	};
 
 	return (
 		<div className='row'>
 			{new Array(10).fill(null).map((empty, idx) => {
-				const [oddSquare, evenSquare] = pattern();
+				const [evenSquare, oddSquare] = pattern();
 
 				const squareValue = idx + 1 + scalar;
 
 				const getClassName = () => {
-					const squareType = idx % 2 === 0 ? oddSquare : evenSquare;
+					const squareType = idx % 2 === 0 ? evenSquare : oddSquare;
 
 					const modifier = (() => {
 						const won =
