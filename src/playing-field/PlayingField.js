@@ -76,6 +76,12 @@ const Row = ({ scalar }) => {
 };
 
 const PlayingField = () => {
+	const { state } = useContext(GameContext);
+
+	window.onunload = () => {
+		localStorage.setItem('winstreak', state.currentWinstreak);
+	};
+
 	const scalars = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90];
 
 	return (

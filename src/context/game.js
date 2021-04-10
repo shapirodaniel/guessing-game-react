@@ -111,9 +111,7 @@ const reducer = (state, { type, payload }) => {
 				maxGuesses: guessesLib[payload.difficulty],
 				numHints: hintsLib[payload.difficulty],
 				currentProgress: progressesLib.PLAYING,
-
-				// store winstreak in local storage
-				currentWinstreak: localStorage.getItem('winstreak') || 0,
+				currentWinstreak: state.currentWinstreak,
 			};
 		}
 
@@ -149,8 +147,6 @@ const reducer = (state, { type, payload }) => {
 					playerMessage: playerMessagesLib.YOU_WIN,
 					currentWinstreak: state.currentWinstreak++,
 				};
-
-				localStorage.setItem('winstreak', state.winstreak++);
 
 				return newState;
 			}
