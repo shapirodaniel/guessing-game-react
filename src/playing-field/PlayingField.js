@@ -79,7 +79,7 @@ const PlayingField = () => {
 	const { state, dispatch, LOAD_GAME } = useContext(GameContext);
 
 	window.onload = () => {
-		const winstreak = +localStorage.getItem('winstreak');
+		const winstreak = +localStorage.getItem('winstreak') || 0;
 
 		dispatch({
 			type: LOAD_GAME,
