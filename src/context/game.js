@@ -150,7 +150,7 @@ const reducer = (state, { type, payload }) => {
 					currentWinstreak: state.currentWinstreak++,
 				};
 
-				localStorage.setItem('winstreak', newState.currentWinstreak);
+				localStorage.setItem('winstreak', state.winstreak++);
 
 				return newState;
 			}
