@@ -113,7 +113,7 @@ const reducer = (state, { type, payload }) => {
 				currentProgress: progressesLib.PLAYING,
 
 				// store winstreak in local storage
-				currentWinstreak: localStorage.getItem('winstreak'),
+				currentWinstreak: localStorage.getItem('winstreak') || 0,
 			};
 		}
 
