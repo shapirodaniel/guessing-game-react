@@ -61,7 +61,6 @@ const initState = {
 	currentWinstreak: 0,
 };
 
-const LOAD_GAME = 'LOAD_GAME';
 const START_GAME = 'START_GAME';
 const PLAYER_GUESSED = 'PLAYER_GUESSED';
 const PLAYER_REQUESTED_HINT = 'PLAYER_REQUESTED_HINT';
@@ -103,13 +102,6 @@ const getNewHints = (level, winner) => {
 
 const reducer = (state, { type, payload }) => {
 	switch (type) {
-		case LOAD_GAME: {
-			return {
-				...state,
-				currentWinstreak: +payload.winstreak || 0,
-			};
-		}
-
 		// payload: { difficulty: /* the current difficulty constant */}
 		case START_GAME: {
 			return {
@@ -171,8 +163,6 @@ const reducer = (state, { type, payload }) => {
 
 			// if lost
 			if (newState.pastGuesses.length === newState.maxGuesses) {
-				localStorage.setItem('winstreak', '0');
-
 				return {
 					...newState,
 					currentProgress: progressesLib.LOST,
@@ -230,7 +220,6 @@ const GameProvider = ({ children }) => {
 		dispatch,
 		difficultiesLib,
 		progressesLib,
-		LOAD_GAME,
 		PLAYER_GUESSED,
 		PLAYER_REQUESTED_HINT,
 		START_GAME,
