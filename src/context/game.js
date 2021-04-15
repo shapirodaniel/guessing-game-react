@@ -148,9 +148,6 @@ const reducer = (state, { type, payload }) => {
 
 			// if player has won
 			if (payload.selectedSquare === state.winningNumber) {
-				console.log(state.currentWinstreak);
-				console.log(getWinstreak(state.currentWinstreak));
-
 				const newState = {
 					...state,
 					currentProgress: progressesLib.WON,
