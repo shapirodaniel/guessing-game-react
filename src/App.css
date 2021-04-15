@@ -44,14 +44,9 @@ body {
 	letter-spacing: 2px;
 }
 
-/* hidden odd, even rows */
 .row {
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
-}
-.odd-row.template,
-.even-row.template {
-	display: none;
 }
 
 /* playing field */

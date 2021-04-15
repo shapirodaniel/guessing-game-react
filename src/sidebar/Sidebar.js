@@ -3,15 +3,18 @@ import { PlayerInfoWrapper, PlayerButtons, DifficultySwitches } from './';
 
 const Sidebar = () => {
 	return (
-		<div className='sidebar'>
-			<div className='sidebar-field-wrapper'>
-				<PlayerInfoWrapper />
-				<PlayerButtons />
+		<>
+			<div className='runner'></div>
+			<div className='sidebar'>
+				<div className='sidebar-field-wrapper'>
+					<PlayerInfoWrapper />
+					<PlayerButtons />
+				</div>
+				<div className='difficulty-wrapper'>
+					<DifficultySwitches />
+				</div>
 			</div>
-			<div className='difficulty-wrapper'>
-				<DifficultySwitches />
-			</div>
-		</div>
+		</>
 	);
 };
 
