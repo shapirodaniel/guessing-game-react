@@ -100,6 +100,11 @@ const getNewHints = (level, winner) => {
 	return res;
 };
 
+// this func guarantees that we receive
+// the latest winstreak when we attempt
+// to set it on state in the reducer fn below
+// circumvents a similar problem to using
+// state values *inside* setState ...
 const getWinstreak = streak => ++streak;
 
 const reducer = (state, { type, payload }) => {
