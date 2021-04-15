@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/guessing-game-react/static/css/main.c0283b34.chunk.css",
-    "main.js": "/guessing-game-react/static/js/main.a353e719.chunk.js",
-    "main.js.map": "/guessing-game-react/static/js/main.a353e719.chunk.js.map",
+    "main.js": "/guessing-game-react/static/js/main.9243a291.chunk.js",
+    "main.js.map": "/guessing-game-react/static/js/main.9243a291.chunk.js.map",
     "runtime-main.js": "/guessing-game-react/static/js/runtime-main.ea9c2c2c.js",
     "runtime-main.js.map": "/guessing-game-react/static/js/runtime-main.ea9c2c2c.js.map",
     "static/js/2.75227fa5.chunk.js": "/guessing-game-react/static/js/2.75227fa5.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.ea9c2c2c.js",
     "static/js/2.75227fa5.chunk.js",
     "static/css/main.c0283b34.chunk.css",
-    "static/js/main.a353e719.chunk.js"
+    "static/js/main.9243a291.chunk.js"
   ]
 }
