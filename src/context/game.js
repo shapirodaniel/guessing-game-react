@@ -100,6 +100,8 @@ const getNewHints = (level, winner) => {
 	return res;
 };
 
+const getWinstreak = streak => ++streak;
+
 const reducer = (state, { type, payload }) => {
 	switch (type) {
 		// payload: { difficulty: /* the current difficulty constant */}
@@ -141,11 +143,14 @@ const reducer = (state, { type, payload }) => {
 
 			// if player has won
 			if (payload.selectedSquare === state.winningNumber) {
+				console.log(state.currentWinstreak);
+				console.log(getWinstreak(state.currentWinstreak));
+
 				const newState = {
 					...state,
 					currentProgress: progressesLib.WON,
 					playerMessage: playerMessagesLib.YOU_WIN,
-					currentWinstreak: state.currentWinstreak++,
+					currentWinstreak: getWinstreak(state.currentWinstreak),
 				};
 
 				return newState;
